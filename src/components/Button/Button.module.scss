@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: $font-body;
+  font-weight: 500;
+  font-size: 13px;
+  height: $control-height-sm;
+  padding: 0 18px;
+  border-radius: 999px;
+  transition: all 0.15s ease;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba($color-accent, 0.9);
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: rgba($color-accent-hover, 0.95);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.danger {
+  border: 1.5px solid $color-error;
+  background-color: transparent;
+  color: $color-error;
+
+  &:hover:not(:disabled) {
+    background-color: $color-error;
+    color: white;
+  }
+}
+
+.secondary {
+  border: 1.5px solid $color-border;
+  background-color: white;
+  color: $color-text;
+
+  &:hover:not(:disabled) {
+    border-color: $color-text;
+    background-color: $color-bg-secondary;
+  }
+}
+
+.danger-solid {
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba($color-error, 0.9);
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: rgba($color-error, 0.95);
+  }
+}

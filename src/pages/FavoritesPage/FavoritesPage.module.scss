@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp($spacing-md, 4vw, $spacing-lg);
+}
+
+.title {
+  font-family: $font-display;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: $spacing-lg;
+}

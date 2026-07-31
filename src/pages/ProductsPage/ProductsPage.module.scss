@@ -1,0 +1,78 @@
+@import "../../styles/variables";
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  padding: $spacing-lg 0;
+  margin-bottom: $spacing-lg;
+  border-bottom: 1px solid $color-border;
+
+  @include tablet-down {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  @include mobile {
+    gap: $spacing-sm;
+  }
+}
+
+.filtersToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  height: $control-height-md;
+  border: 1.5px solid $color-border;
+  border-radius: $radius-md;
+  background-color: white;
+  color: $color-text;
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+
+  &:hover {
+    border-color: $color-text;
+    background-color: $color-bg-secondary;
+  }
+
+  @include mobile {
+    display: flex;
+  }
+}
+
+.filterControls {
+  display: contents;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.25s ease,
+      opacity 0.2s ease;
+  }
+}
+
+.filterControlsOpen {
+  @include mobile {
+    max-height: 220px;
+    opacity: 1;
+    overflow: visible;
+  }
+}
+
+.pageWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-lg;
+  padding-top: $spacing-xl;
+}

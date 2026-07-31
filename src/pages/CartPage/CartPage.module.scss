@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp($spacing-md, 4vw, $spacing-lg);
+  padding-bottom: $spacing-xl;
+}

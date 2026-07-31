@@ -1,0 +1,11 @@
+@import "../../../styles/variables";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp($spacing-md, 4vw, $spacing-lg);
+  list-style: none;
+}

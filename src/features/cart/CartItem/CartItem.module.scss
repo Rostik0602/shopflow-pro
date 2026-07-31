@@ -1,0 +1,69 @@
+@import "../../../styles/variables";
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  padding: $spacing-lg;
+  background-color: white;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+
+  @include mobile {
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    padding: $spacing-md;
+  }
+}
+
+.image {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: $radius-md;
+  flex-shrink: 0;
+
+  @include mobile {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-family: $font-display;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  font-family: $font-mono;
+  font-size: 15px;
+  color: $color-price;
+  margin-top: 4px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+
+  @include mobile {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.quantity {
+  font-family: $font-mono;
+  font-size: 15px;
+  min-width: 24px;
+  text-align: center;
+}

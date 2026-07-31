@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.input {
+  font-family: $font-body;
+  font-size: 14px;
+  padding: 9px 14px;
+  border: 1.5px solid $color-border;
+  border-radius: $radius-md;
+  background-color: white;
+  color: $color-text;
+  transition: border-color 0.15s ease;
+  width: 100%;
+  height: $control-height-md;
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../styles/variables";
+
+.group {
+  display: inline-flex;
+  gap: 4px;
+
+  @include mobile {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.sortButton {
+  @include mobile {
+    flex: 1;
+    padding: 0 4px;
+  }
+}

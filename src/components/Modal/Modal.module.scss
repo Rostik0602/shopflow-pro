@@ -1,0 +1,39 @@
+@import "../../styles/variables";
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+  padding: $spacing-md $spacing-xl;
+  border-bottom: 1px solid $color-border;
+  background-color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: $spacing-md;
+}
+
+.box {
+  background-color: white;
+  border-radius: $radius-lg;
+  padding: clamp($spacing-md, 5vw, $spacing-lg);
+  max-width: 420px;
+  width: 100%;
+  box-shadow: $shadow-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}

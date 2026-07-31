@@ -1,0 +1,9 @@
+.favoriteWrapper {
+  display: inline-flex;
+
+  button {
+    justify-content: center;
+    white-space: nowrap;
+    min-width: 230px;
+  }
+}

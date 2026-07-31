@@ -1,0 +1,33 @@
+@import "../../../styles/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  max-width: 480px;
+  margin: clamp($spacing-md, 5vw, $spacing-xl) auto;
+  padding: clamp($spacing-md, 6vw, $spacing-xl);
+  background-color: white;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+}
+
+.title {
+  font-family: $font-display;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: $spacing-sm;
+}
+
+.error {
+  background-color: rgba($color-error, 0.1);
+  color: $color-error;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-sm;
+  font-size: 13px;
+}
+
+.submitButton {
+  margin-top: $spacing-sm;
+}

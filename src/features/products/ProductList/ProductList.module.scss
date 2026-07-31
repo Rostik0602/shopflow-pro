@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-lg;
+  list-style: none;
+
+  @include laptop-down {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include tablet-down {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-md;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}

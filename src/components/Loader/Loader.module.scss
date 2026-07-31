@@ -1,0 +1,10 @@
+@import "../../styles/variables";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xl * 2;
+  color: $color-text-muted;
+  font-size: 14px;
+}

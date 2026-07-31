@@ -1,0 +1,107 @@
+@import "../../styles/variables";
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp($spacing-lg, 6vw, $spacing-xl)
+    clamp($spacing-md, 4vw, $spacing-lg);
+}
+
+.backLink {
+  display: inline-block;
+  font-size: 14px;
+  color: $color-text-muted;
+  margin-bottom: $spacing-lg;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.imageWrapper {
+  aspect-ratio: 1 / 1;
+  border-radius: $radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: $spacing-xl;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.title {
+  font-family: $font-display;
+  font-size: clamp(20px, 4vw + 8px, 26px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.price {
+  font-family: $font-mono;
+  font-size: clamp(19px, 3vw + 8px, 24px);
+  color: $color-price;
+  margin: $spacing-xs 0;
+}
+
+.rating {
+  color: $color-text-muted;
+  font-size: 14px;
+}
+
+.description {
+  color: $color-text;
+  line-height: 1.6;
+  margin: $spacing-sm 0;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-lg;
+  font-size: 13px;
+  color: $color-text-muted;
+  padding-top: $spacing-sm;
+  border-top: 1px solid $color-border;
+
+  @include mobile {
+    gap: $spacing-md;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+}
+
+.rating {
+  color: $color-text-muted;
+  font-size: 14px;
+}
+
+.star {
+  color: #f5a623;
+}

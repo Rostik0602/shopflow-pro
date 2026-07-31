@@ -1,0 +1,10 @@
+@import "../../../styles/variables";
+
+.wrapper {
+  max-width: 280px;
+  width: 100%;
+
+  @include tablet-down {
+    max-width: none;
+  }
+}
