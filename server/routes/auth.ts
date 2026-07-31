@@ -1,6 +1,6 @@
 import express from "express";
 import bcrypt from "bcrypt";
-import { readData } from "../utils/db";
+import { readData, writeData } from "../utils/db";
 import { generateToken } from "../utils/jwt";
 
 const router = express.Router();
@@ -32,6 +32,33 @@ router.post("/login", async (req, res) => {
   res.json({
     id: user.id,
     username: user.username,
+    accessToken: token,
+  });
+});
+
+router.post("/register", async (req, res) => {
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+    return res.status(400).json({ message: "Username and password are required" });
+  }
+
+  const data = readData<{ users: User[] }>("users.json");
+
+  if (data.users.some((u) => u.username === username)) {
+    return res.status(400).json({ message: "Username already taken" });
+  }
+
+  const passwordHash = await bcrypt.hash(password, 10);
+  const newUser: User = { id: Date.now(), username, passwordHash };
+
+  writeData("users.json", { users: [...data.users, newUser] });
+
+  const token = generateToken(newUser.id);
+
+  res.json({
+    id: newUser.id,
+    username: newUser.username,
     accessToken: token,
   });
 });
