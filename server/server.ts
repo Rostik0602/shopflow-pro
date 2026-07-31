@@ -12,6 +12,10 @@ app.use(express.json());
 app.use("/products", productsRouter);
 app.use("/auth", authRouter);
 
+app.get("/healthz", (req, res) => {
+  res.sendStatus(200);
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
