@@ -5,7 +5,7 @@ export const authApi = createApi({
   reducerPath: "authApi",
 
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000",
+    baseUrl: "https://shopflow-pro-0ume.onrender.com",
   }),
 
   endpoints: (builder) => ({

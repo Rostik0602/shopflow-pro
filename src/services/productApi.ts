@@ -16,7 +16,7 @@ export const productApi = createApi({
   reducerPath: "productApi",
 
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000",
+    baseUrl: "https://shopflow-pro-0ume.onrender.com",
 
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).auth.token;
