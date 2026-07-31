@@ -5,7 +5,7 @@ export const authApi = createApi({
   reducerPath: "authApi",
 
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://shopflow-pro-0ume.onrender.com",
+    baseUrl: import.meta.env.VITE_API_URL,
   }),
 
   endpoints: (builder) => ({
