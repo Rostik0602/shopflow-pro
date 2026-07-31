@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-const SECRET_KEY = "your-secret-key-change-this";
+const SECRET_KEY = process.env.JWT_SECRET || "your-secret-key-change-this";
 
 export function generateToken(userId: number) {
   return jwt.sign({ userId }, SECRET_KEY, { expiresIn: "1h" });
