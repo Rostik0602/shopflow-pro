@@ -1,53 +1,47 @@
-⚠️ The backend is hosted on Render's free tier and may take 30-60 seconds to wake up on the first request after inactivity.
-
+> ⚠️ The backend is hosted on Render's free tier and may take 30–60 seconds to wake up on the first request after inactivity.
 
 # ShopFlow Pro
 
-Fullstack e-commerce application built with React, TypeScript, Redux Toolkit, RTK Query, Node.js and Express.
+Full-stack e-commerce application built with React, TypeScript, Redux Toolkit, RTK Query, Node.js and Express.
 
 ShopFlow Pro is a modern online store with authentication, product management, shopping cart, favorites and responsive UI.
 
-The project demonstrates client-server architecture, state management, JWT authentication, REST API integration and modern frontend development practices.
+The project demonstrates client-server architecture, state management, JWT authentication, REST API and modern frontend development practices.
 
 ## Live Demo
 
-🌐 Frontend:
-https://shopflow-pro-six.vercel.app/
+🌐 **Frontend:** https://shopflow-pro-six.vercel.app/
 
-⚙️ Backend API:
-https://shopflow-pro-0ume.onrender.com
+⚙️ **Backend API:** https://shopflow-pro-0ume.onrender.com
 
 ## Tech Stack
 
 ### Frontend
 
-The application follows a feature-based architecture:
-
-- components — reusable UI components
-- features — business logic modules
-- pages — application routes
-- services — API communication
-- store — Redux state management
-
 - React 18
 - TypeScript
-- Redux Toolkit
-- RTK Query (data fetching, caching and API state management)
+- Redux Toolkit + RTK Query (data fetching, caching and API state management)
 - React Router v6
 - SCSS Modules
 - Vite
 - Lucide React
 
+The application follows a feature-based architecture:
+
+- `components/` — reusable UI components
+- `features/` — business logic modules
+- `pages/` — application routes
+- `services/` — API communication
+- `app/` — Redux store and root component
+
 ### Backend
 
-- Node.js
-- Express
-- TypeScript
-- tsx
-- JWT Authentication
+- Node.js + Express
+- TypeScript (tsx)
+- JWT authentication (jsonwebtoken)
 - bcrypt password hashing
 - CORS
-- JSON-based data storage
+- JSON file as database
 
 ### Deployment
 
@@ -60,64 +54,51 @@ The application follows a feature-based architecture:
 
 - User registration with validation
 - Unique username checking
-- User login/logout
+- User login / logout
 - JWT authentication with expiration
 - Protected routes
 - Persistent authentication using localStorage
-- Reactive authentication state with Redux Toolkit
+- Reactive auth state with Redux Toolkit (no page reload required)
 
 ### Product Catalog
 
-- Server-side pagination
-- Product search with debounce
+- Server-side pagination (16 products per page)
+- Product search with debounce (600ms)
 - Category filtering
-- Sorting by price, name and rating
-- Ascending/descending sorting
-- Product cards with category badges
+- Sorting by price, title and rating with ascending/descending toggle
+- Product cards with category badges and hover animations
 
 ### Product Management (CRUD)
 
-- Create products
-- Edit products
-- Delete products
-- Form validation
-- Confirmation modals
-- Optimistic UI updates with RTK Query cache updates
+- Create products with form validation
+- Edit existing products
+- Delete products with confirmation modal
+- Optimistic UI updates via RTK Query cache (onQueryStarted)
 
 ### Shopping Cart
 
-- Add/remove products
-- Quantity management
-- Automatic item removal when quantity reaches zero
-- Total price calculation
-- Cart clearing confirmation
-- Empty cart state
+- Add / remove products
+- Quantity management (auto-removes item when quantity reaches zero)
+- Total price and item count calculation
+- Cart clearing with confirmation modal
+- Empty cart state with icon
 
 ### Favorites
 
-- Add/remove favorites
-- Favorites page
-- Empty state handling
+- Add / remove favorites
+- Dedicated favorites page
+- Empty state with icon
 
-## UI / UX
+### UI / UX
 
-- Fully responsive design
-- CSS Grid responsive product layout
-- Sticky navigation bar
-- Reusable UI components
-- Modal windows using React Portal
-- Loading and error states
-- Custom SCSS design system
-- CSS variables for colors, spacing and shadows
-
-### Design
-
-- Space Grotesk for headings
-- Inter for body text
-- JetBrains Mono for prices
-- Pill-style buttons
-- Animated interactions
-
+- Responsive CSS Grid product layout
+- Sticky navigation bar with logo and username
+- Modal windows via React Portal (createPortal)
+- Loading, error and empty states
+- Custom SCSS design system with tokens (colors, spacing, shadows, typography)
+- Space Grotesk for headings, Inter for body text, JetBrains Mono for prices
+- Pill-style buttons with variants (primary / secondary / danger)
+- Animated card hover effects and favorite icon spring animation
 
 ## Screenshots
 
@@ -131,7 +112,7 @@ Main product catalog with search, filtering, sorting and responsive product grid
 
 ### Product Details
 
-Detailed product page with product information, favorites and product actions.
+Detailed product page with full product information and actions.
 
 ![Product Details](./screenshots/product-details.png)
 
@@ -149,7 +130,7 @@ User login and registration with validation and JWT authentication.
 
 ### Product Management
 
-Create and edit products with form validation and protected routes.
+Create and edit products with form validation.
 
 ![Create Product](./screenshots/create-product.png)
 
@@ -159,7 +140,7 @@ Create and edit products with form validation and protected routes.
 
 ### Shopping Cart
 
-Cart management with quantity control, total price calculation and empty state handling.
+Cart management with quantity controls and total price calculation.
 
 ![Shopping Cart](./screenshots/cart.png)
 
@@ -167,10 +148,9 @@ Cart management with quantity control, total price calculation and empty state h
 
 ### Favorites
 
-Favorites page with adding and removing products.
+Favorites page with product grid.
 
 ![Favorites](./screenshots/favorites.png)
-
 
 ## Installation
 
@@ -178,45 +158,37 @@ Favorites page with adding and removing products.
 
 ```bash
 git clone https://github.com/Rostik0602/shopflow-pro.git
-
-Navigate to the project folder:
-
 cd shopflow-pro
-Install frontend dependencies
+```
+
+### Install frontend dependencies
+
+```bash
 npm install
-Install backend dependencies
+```
 
-Navigate to the server folder:
+### Install backend dependencies
 
+```bash
 cd server
-
-Install dependencies:
-
 npm install
-Environment Variables
+```
 
-Create a .env file in the root directory of the project:
-
-VITE_API_URL=http://localhost:3000
-
-This variable defines the backend API URL used by the frontend application.
-
-Run the application
+### Run the application
 
 Start the backend server:
 
+```bash
 cd server
-
 npm run dev
+```
 
-Start the frontend application in a separate terminal:
+Start the frontend in a separate terminal:
 
+```bash
 npm run dev
+```
 
-The application will be available at:
+The frontend will be available at `http://localhost:5173`
 
-http://localhost:5173
-
-The backend API will run at:
-
-http://localhost:3000
+The backend API will run at `http://localhost:3000`
