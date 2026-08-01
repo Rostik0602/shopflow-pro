@@ -1,6 +1,12 @@
 import fs from "fs";
 import path from "path";
 
+const USERS_PATH = path.join(__dirname, '..', 'data', 'users.json')
+
+if (!fs.existsSync(USERS_PATH)) {
+  fs.writeFileSync(USERS_PATH, JSON.stringify({ users: [] }, null, 2))
+}
+
 function getFilePath(fileName: string) {
   return path.join(__dirname, "..", "data", fileName);
 }
