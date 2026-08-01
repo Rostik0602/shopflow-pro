@@ -33,6 +33,7 @@ export default function ProductsDetails() {
               src={data.thumbnail}
               alt={data.title}
               className={styles.image}
+               loading="lazy"
             />
           </div>
 

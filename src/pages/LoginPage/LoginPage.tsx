@@ -57,9 +57,7 @@ export default function LoginPage() {
           onChange={handleChange}
           placeholder="Password"
         />
-        <Button type="submit" className={styles.submitButton}>
-          Войти
-        </Button>
+        <Button type="submit" className={styles.submitButton}>Sign In</Button>
 
         <p className={styles.linkRow}>
           Already have an account? <Link to="/register">Register</Link>

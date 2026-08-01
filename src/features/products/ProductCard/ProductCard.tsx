@@ -50,6 +50,7 @@ export default function ProductCard({ product, onDelete }: ProductCardProps) {
           src={product.thumbnail}
           alt={product.title}
           className={styles.image}
+           loading="lazy"
         />
 
         <div className={styles.floatingActions}>
