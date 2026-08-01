@@ -1,3 +1,6 @@
+⚠️ The backend is hosted on Render's free tier and may take 30-60 seconds to wake up on the first request after inactivity.
+
+
 # ShopFlow Pro
 
 Fullstack e-commerce application built with React, TypeScript, Redux Toolkit, RTK Query, Node.js and Express.
